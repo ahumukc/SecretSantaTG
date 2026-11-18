@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: secret-santa-bot
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    init: true
